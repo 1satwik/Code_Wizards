@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical & Health App</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    
+    <!-- Login Section -->
+     <script type="text/javascript"src="web.js"></script>
+     
+    <div id="login-container">
+        <h1>User Login</h1>
+        <label for="role">Select Role:</label>
+          <select id="role" onchange="showLoginFields()">
+            <option value="doctor">Doctor</option>
+            <option value="patient">Patient</option>
+        </select><br>
+
+        <div id="doctor-login" class="login-fields" style="display:none;">
+            <label for="doctor-id">Enter Doctor Login ID:</label>
+            <input type="text" id="doctor-id" placeholder="Enter ID">
+        </div>
+
+        <div id="patient-login" class="login-fields" style="display:none;">
+            <label for="patient-id">Enter Patient Unique ID:</label>
+            <input type="text" id="patient-id" placeholder="Enter Unique ID">
+        </div>
+
+        <button onclick="login()">Login</button>
+        <p id="error-message" style="color:black; display:none;">Login Failed! Please check your credentials.</p>
+    </div>
+
+    <!-- Dashboard -->
+    <h1><div id="dashboard" style="display:none;">
+        
+        <button onclick="showRegisterPatient()">Register Patient</button><br>
+        <button onclick="showBookAppointment()">Book Appointment</button><br>
+        <button onclick="showViewPatientRecords()">View Patient Records</button><br>
+        <button onclick="showDiagnosisInput()">Diagnosis Input</button><br>
+        <button onclick="showPrescriptionManagement()">Prescription Management</button><br>
+        <button onclick="showTrafficTracker()">Track Traffic</button><br>
+        <button onclick="logout()">Logout</button>
+        
+    </div>
+</h1>
+
+    <!-- Patient Registration Section -->
+    <div id="patient-registration" style="display:none;">
+      
+       <h2>Register Patient</h2>
+        <input type="text" id="patient-name" placeholder="Patient Name">
+        <input type="text" id="patient-age" placeholder="Patient Age">
+        <input type="text" id="patient-disease" placeholder="Disease">
+        <button onclick="goBack()">Back</button>
+        <button onclick="savePatient()">Save Patient</button>
+    </div>
+
+    <!-- Book Appointment Section -->
+    <div id="appointment-booking" style="display:none;">
+    
+        <h2>Book Appointment</h2>
+        <input type="text" id="doctor-name" placeholder="Enter Doctor Name">
+        <input type="datetime-local" id="appointment-date">
+        <button onclick="goBack()">Back</button>
+        <button onclick="confirmAppointment()">Confirm Appointment</button>
+        <div id="appointment-status"></div>
+    </div>
+
+    <!-- View Patient Records Section -->
+    <div id="patient-records" style="display:none;">
+        
+        <h2>View Patient Records</h2>
+        <input type="text" id="search-patient" placeholder="Search Patient ID">
+        <button onclick="goBack()">Back</button>
+        <button onclick="searchPatient()">Search</button>
+        <div id="patient-info"></div>
+    </div>
+
+    <!-- Diagnosis Input Section -->
+    <div id="diagnosis-input" style="display:none;">
+        
+        <h2>Diagnosis Input</h2>
+        <textarea id="diagnosis-text" placeholder="Enter Diagnosis"></textarea>
+        <button onclick="goBack()">Back</button>
+        <button onclick="saveDiagnosis()">Save Diagnosis</button>
+    </div>
+
+    <!-- Prescription Management Section -->
+    <div id="prescription-management" style="display:none;">
+        
+        <h2>Prescription Management</h2>
+        <textarea id="prescription-text" placeholder="Enter Prescription"></textarea>
+        <button onclick="goBack()">Back</button>
+        <button onclick="sendPrescription()">Send Prescription</button>
+        
+    </div>
+
+    <!-- Traffic Tracker Section -->
+    <div id="traffic-tracker" style="display:none;">
+        
+        <h2>Track Traffic</h2>
+        <button onclick="goBack()">Back</button>
+        <button onclick="trackTraffic()">Check Traffic Near Me</button>
+        <div id="traffic-info"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
