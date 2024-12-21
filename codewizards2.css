@@ -1,0 +1,52 @@
+body {
+    background-color: #C9C9EE;
+    text-size-adjust: 20px;
+    text-align: center;
+    background-image:url(https://img.freepik.com/free-vector/abstract-medical-wallpaper-template-design_53876-61802.jpg?t=st=1734801118~exp=1734804718~hmac=4298a5bfcde22077146af34b545a2b499a3afc452441c7570004648da587f96a&w=826 );
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 250px;
+}
+
+h1 {
+    color: teal;
+    text-transform: uppercase;
+}
+    label{
+        text-size-adjust: 30px;
+        color:black;
+
+    }
+h3 {
+   color:black;
+}
+
+button {
+    background-color: #F44336;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+}
+
+button:hover {
+    background-color: #D32F2F;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#dashboard, #patient-registration, #appointment-booking, #patient-records, #diagnosis-input, #prescription-management, #traffic-tracker {
+    margin-top: 20px;
+}
+
+#error-message {
+    color: red;
+    display: none;
+}
